@@ -70,3 +70,14 @@ module "namespace_vault" {
   editors = var.cluster_managers
   readers = var.cluster_devs
 }
+
+module "namespace_consul" {
+  source = "../../modules/namespace"
+
+  name   = "consul"
+  domain = "networking"
+
+  admins  = var.cluster_admins
+  editors = var.cluster_managers
+  readers = var.cluster_devs
+}

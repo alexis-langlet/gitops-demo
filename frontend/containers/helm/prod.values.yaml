@@ -21,3 +21,6 @@ ingress:
     - secretName: frontend-tls
       hosts:
         - www.gitops-demo.a-gomez.fr
+
+podAnnotations:
+  consul.hashicorp.com/connect-inject: "true"
